@@ -3,7 +3,6 @@ import Head from "next/head";
 
 import Header from "../components/Header";
 import Nav from "../components/Nav";
-import TopLeftImg from "../components/TopLeftImg";
 
 // setup font
 const sora = Sora({
@@ -15,24 +14,21 @@ const sora = Sora({
 const Layout = ({ children }) => {
   return (
     <main
-      className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
+      className={`min-h-screen bg-[#0a0a0a] text-white ${sora.variable} font-sora relative overflow-hidden`}
     >
       {/* metadata */}
       <Head>
-        <title>Ethan Smith | Portfolio</title>
+        <title>Voltshop</title>
         <meta
           name="description"
-          content="Ethan Smith is a Full-stack web developer with 10+ years of experience."
+          content="Loja de recursos premium para servidores"
         />
-        <meta
-          name="keywords"
-          content="react, next, nextjs, html, css, javascript, js, modern-ui, modern-ux, portfolio, framer-motion, 3d-website, particle-effect"
-        />
-        <meta name="author" content="Sanidhya Kumar Verma" />
-        <meta name="theme-color" content="#f13024" />
+        <meta name="theme-color" content="#FF6B00" />
       </Head>
 
-      <TopLeftImg />
+      {/* Splash vermelho/laranja (igual da página Trabalhos) */}
+      <div className="absolute bottom-0 left-0 w-[900px] h-[900px] bg-gradient-to-tr from-red-600/30 via-transparent to-transparent pointer-events-none" />
+
       <Nav />
       <Header />
 
